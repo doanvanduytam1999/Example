@@ -7,7 +7,7 @@ export class UserController {
     constructor(private readonly usersService: UsersService) {
     }
   
-    @Get()
+    @Get('')
     findAll(): Promise<User[]> {
         return this.usersService.findAll()
     }
@@ -22,7 +22,7 @@ export class UserController {
         return this.usersService.create(user);
     }
 
-    @Put('/update')
+    @Put('/updateUser')
     update(@Body() user: User) {
         return this.usersService.update(user);
     }

@@ -1,0 +1,32 @@
+<section class="page_product">
+    <div>
+        <h2 class="title">Products</h2>
+    </div>
+    <div class="product">
+        <div *ngFor="let product of products">
+            <div class="product_item">
+                <a [title]="product.name + ' Detail'" [routerLink]="['/products', product.id]">
+                    <h3>
+                        {{product.name}}
+                    </h3>
+                    <div class="img">
+                        <img class="imgProduct" [src]="product.image" />
+                    </div>
+                </a>
+                <div class="descrip">
+                    <div *ngIf="product.description">
+                        <p>{{product.description}}</p>
+                    </div>
+
+                    <button class="btnShare" (click)="share()">Share</button>
+
+                    <app-prodcuct-alerts [product]="product" (notify)="onNotify()">
+                    </app-prodcuct-alerts>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>

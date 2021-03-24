@@ -24,7 +24,7 @@ export const products = [
     id: 4,
     name: 'IPhone 12 Pro Max',
     price: 299,
-    description: '',
+    description: 'A large phone with one of the best screens',
     image: 'assets/img/iphone12-promax.png'
   },
 ];

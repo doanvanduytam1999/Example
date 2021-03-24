@@ -157,3 +157,8 @@ app-top-bar h1 {
 app-prodcuct-list {
     width: 100%;
 }
+
+.title {
+    font-size: 30px;
+    font-weight: bolder;
+}

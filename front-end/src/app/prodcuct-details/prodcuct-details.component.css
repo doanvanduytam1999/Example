@@ -1,4 +1,16 @@
-.imgProduct {
-    height: 280px;
+.img .imgProduct {
     width: 280px;
+    height: 280px;
+}
+
+.detailProduct {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bolder;
 }

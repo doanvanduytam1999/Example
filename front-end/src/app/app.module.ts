@@ -12,6 +12,7 @@ import { ProductDetailsComponent } from './prodcuct-details/prodcuct-details.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProdcuctAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

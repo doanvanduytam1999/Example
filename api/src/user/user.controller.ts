@@ -22,7 +22,6 @@ export class UserController {
     @ApiOperation({summary: "Get user by ID"})
     @ApiOkResponse({type: User, description: 'Successful' })
     @ApiForbiddenResponse({ description: 'Forbidden' })
-    @ApiNotFoundResponse({status: 404, description: "User was not found"})
     get(@Param('id') id: number) {
         return this.usersService.findOne(id);
     }
@@ -49,7 +48,6 @@ export class UserController {
     @ApiOperation({summary: "Delete user"})
     @ApiBody({type: User})
     @ApiOkResponse({ description: 'Successfully deleted' })
-    @ApiNotFoundResponse({status: 404, description: "User was not found"})
     @ApiForbiddenResponse({ description: 'Forbidden' })
     deleteUser(@Param('id') id: number) {
         return this.usersService.remove(id);

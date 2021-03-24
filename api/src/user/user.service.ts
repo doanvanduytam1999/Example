@@ -1,7 +1,10 @@
+import { from } from 'rxjs';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { DeleteResult, InsertResult, Repository, UpdateResult } from 'typeorm';
 import { User } from './user.entity';
+import {RegiesterDTO} from './user.model';
+
 
 @Injectable()
 export class UsersService {
@@ -26,7 +29,7 @@ export class UsersService {
     return await this.usersRepository.update(user.id, user);
   }
 
-  async create(user: User): Promise<InsertResult> {
+  async create(user: RegiesterDTO): Promise<InsertResult> {
     return await this.usersRepository.insert(user);
   }
 }

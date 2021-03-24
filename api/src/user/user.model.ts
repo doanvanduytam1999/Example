@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNumber, IsString, isString } from 'class-validator';
+import { IsBoolean, IsNumber, IsString, isString } from 'class-validator';
 
 export class RegiesterDTO {
 
@@ -11,7 +11,7 @@ export class RegiesterDTO {
     @ApiProperty({example: "Tam"})
     lastName: string;
 
-    @IsString()
+    @IsBoolean()
     @ApiProperty({example: true})
     isActive: boolean;
 }

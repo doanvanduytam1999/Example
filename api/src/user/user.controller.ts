@@ -2,7 +2,7 @@ import { UsersService } from './user.service';
 import { User } from './user.entity';
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { RegiesterDTO } from './user.model'
-import { ApiBadRequestResponse, ApiBody, ApiCreatedResponse, ApiForbiddenResponse, ApiNotFoundResponse, ApiOkResponse, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {  ApiBody, ApiCreatedResponse, ApiForbiddenResponse, ApiOkResponse, ApiOperation,  ApiTags } from '@nestjs/swagger';
 
 @ApiTags('user')
 @Controller('user')

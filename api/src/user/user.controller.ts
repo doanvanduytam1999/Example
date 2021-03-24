@@ -46,7 +46,6 @@ export class UserController {
 
     @Delete('delete/:id')
     @ApiOperation({summary: "Delete user"})
-    @ApiBody({type: User})
     @ApiOkResponse({ description: 'Successfully deleted' })
     @ApiForbiddenResponse({ description: 'Forbidden' })
     deleteUser(@Param('id') id: number) {

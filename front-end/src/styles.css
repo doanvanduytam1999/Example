@@ -143,11 +143,11 @@ app-top-bar h1 {
     max-width: 450px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 16px 32px;
-    margin-bottom: 8px;
+    justify-content: space-around;
+    padding: 15px;
     border-radius: 2px;
     background-color: #EEEEEE;
+    text-align: center;
 }
 
 .material-icons {

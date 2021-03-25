@@ -5,8 +5,12 @@
 </p>
 
 <div class="cart-item" *ngFor="let item of items">
-    <span>{{item.name}}</span>
-    <span>{{item.price | currency}}</span>
+    <span class="itemDetail">{{item.name}}</span>
+    <span class="itemDetail">{{item.price | currency}}</span>
+    <button class="btnCart" (click)="downQuantity(item.id)"> - </button>
+    <span class="itemDetail">{{item.quantity}}</span>
+    <button class="btnCart" (click)="upQuantity(item.id)"> + </button>
+    <button class="btnRemove" (click)="removeItem(item.id)">X</button>
 </div>
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">

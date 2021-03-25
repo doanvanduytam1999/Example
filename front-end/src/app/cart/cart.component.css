@@ -1,0 +1,13 @@
+.btnCart {
+    text-align: center;
+}
+
+.itemDetail {
+    padding-top: 10px;
+}
+
+.btnRemove {
+    color: white;
+    font-weight: bold;
+    background-color: red;
+}

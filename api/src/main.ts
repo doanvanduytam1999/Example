@@ -11,6 +11,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.useGlobalPipes(new ValidationPipe());
+  app.enableCors();
 
   const swaggerConfig = new DocumentBuilder().addBearerAuth().build();
   const doc = SwaggerModule.createDocument(app, swaggerConfig);

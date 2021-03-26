@@ -29,7 +29,6 @@ export class CartComponent implements OnInit{
   }
 
   upQuantity(id){
-    console.log(this.items);
     for(var i = 0; i < this.items.length; i++){
       if(this.items[i].id == id){
         this.items[i].quantity++;
@@ -39,7 +38,6 @@ export class CartComponent implements OnInit{
   }
 
   downQuantity(id){
-    console.log(this.items);
     for(var i = 0; i < this.items.length; i++){
       if(this.items[i].id == id ){
         if(this.items[i].quantity > 1){

@@ -1,4 +1,5 @@
-import { products } from './../product';
+import { ProductService } from './../product.service';
+import { Product } from './../models/product';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../cart.service';
@@ -9,20 +10,23 @@ import { CartService } from '../cart.service';
   styleUrls: ['./prodcuct-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  product;
+  product: Product;
 
   constructor(
     private route: ActivatedRoute,
-    private cartService: CartService
+    private cartService: CartService,
+    private productService: ProductService
   ) { }
 
   ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('productId'));
-
+    const productIdFromRoute = routeParams.get('productId');
+    
     // Find the product that correspond with the id provided in route.
-    this.product = products.find(product => product.id === productIdFromRoute);
+    this.productService.getProductById(productIdFromRoute).subscribe((result)=>{
+      this.product = result;
+    });
   }
 
   addToCart(product) {
